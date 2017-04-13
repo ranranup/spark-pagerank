@@ -1,0 +1,26 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "static host",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node index",
+    "dev:hot": "gulp hot",
+    "server": "cross-env NODE_ENV=production node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "no"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.1",
+    "cross-env": "^3.1.3",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "http-proxy-middleware": "^0.17.2"
+  }
+}

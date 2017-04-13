@@ -1,0 +1,19 @@
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+.container {
+    border: 1px solid #ccc;
+    padding-top: 20px;
+}
+.table-content {
+    margin: 0 40px 0;
+}
+#panel-detail {
+    display: none;
+    padding: 10px;
+}
+.progress {
+    margin-top: 20px;
+    padding: 0 20px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>spark-pagerank</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="lib/layui/css/layui.css">
+    </head>
+    <body>
+        <div class="content">
+            <ul class="layui-nav">
+                <li class="layui-nav-item">spark-pagerank</li>
+            </ul>
+            <div class="container">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">起始网址</label>
+                            <div class="layui-input-inline" style="width: 200px;">
+                                <input type="text" id="startUrl" placeholder="http://" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        
+                        <div class="layui-inline">
+                            <label class="layui-form-label">网页总数</label>
+                            <div class="layui-input-inline" style="width: 200px;">
+                                <input type="number" id="total" autocomplete="off" placeholder="10000" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button class="layui-btn" id="btn-sub">提交</button>
+                            <button class="layui-btn layui-btn-danger" id="btn-truncate">一键删除</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="table-content">
+                    <table class="layui-table">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>开始网址</th>
+                                <th>已处理数</th>
+                                <th>目标总数</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="taskstable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="panel-detail">
+            <div class="progress">
+                <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+                  <div class="layui-progress-bar layui-bg-green" lay-percent="30%"></div>
+                </div>
+            </div>
+        </div>
+        <script src="lib/jquery.min.js" charset="utf-8"></script>
+        <script src="lib/layui/layui.js" charset="utf-8"></script>
+        <script src="js/index.js" charset="utf-8"></script>
+    </body>
+</html>
