@@ -12,7 +12,7 @@
                 <li class="layui-nav-item">spark-pagerank</li>
             </ul>
             <div class="container">
-                <form class="layui-form" action="">
+                <div class="layui-form">
                     <div class="layui-form-item">
                         <div class="layui-inline">
                             <label class="layui-form-label">起始网址</label>
@@ -32,7 +32,7 @@
                             <button class="layui-btn layui-btn-danger" id="btn-truncate">一键删除</button>
                         </div>
                     </div>
-                </form>
+                </div>
                 <div class="table-content">
                     <table class="layui-table">
                         <thead>
@@ -52,53 +52,130 @@
     </div>
     <div id="panel-detail">
         <div class="progress">
-            <div class="layui-progress layui-progress-big" lay-showPercent="yes">
-                <div class="layui-progress-bar layui-bg-green" lay-percent="30%"></div>
+            <!-- <div class="layui-progress layui-progress-big" lay-filter="myProcess" lay-showPercent="yes">
+                <div class="layui-progress-bar layui-bg-green" lay-percent="0%"></div>
+            </div> -->
+            <div class="layui-progress layui-progress-big" lay-filter="myProcess" lay-showPercent="true">
+              <div class="layui-progress-bar" lay-percent="0%"></div>
             </div>
-            <table class="layui-table">
-                <!-- <tr>
-                    <th>id</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>开始网址</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>已处理数</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>目标总数</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>状态</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>创建时间</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>爬取开始时间</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>爬取结束时间</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>导出时间</th>
-                    <td>test</td>
-                </tr>
-                <tr>
-                    <th>计算时间</th>
-                    <td>test</td>
-                </tr> -->
-            </table>
-        </div>
+        </div>    
+        <table class="layui-table">
+            <tr>
+                <th>id</th>
+                <td id="taskId"></td>
+            </tr>
+            <tr>
+                <th>开始网址</th>
+                <td id="taskStartUrl"></td>
+            </tr>
+            <tr>
+                <th>已处理数</th>
+                <td id="hasHandled"></td>
+            </tr>
+            <tr>
+                <th>目标总数</th>
+                <td id="totalUrl"></td>
+            </tr>
+            <tr>
+                <th>状态</th>
+                <td id="status"></td>
+            </tr>
+            <tr>
+                <th>创建时间</th>
+                <td id="createTime"></td>
+            </tr>
+            <tr>
+                <th>爬取开始时间</th>
+                <td id="crawlStartTime"></td>
+            </tr>
+            <tr>
+                <th>爬取结束时间</th>
+                <td id="crawlEndTime"></td>
+            </tr>
+            <tr>
+                <th>导出时间</th>
+                <td id="exportTime"></td>
+            </tr>
+            <tr>
+                <th>计算时间</th>
+                <td id="pageRankTime"></td>
+            </tr>
+        </table>
     </div>
+
+     <div id="panel-rank">
+         <table class="layui-table">
+             <thead>
+                 <tr>
+                     <th>序号</th>
+                     <th>网址</th>
+                     <th>标题</th>
+                     <th>得分</th>
+                 </tr>
+             </thead>
+         <tbody id="tasks-rank">
+             <!-- <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr>
+             <tr>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+                 <td>test</td>
+             </tr> -->
+         </tbody>
+     </div>
 </div>
 <script src="lib/jquery.min.js" charset="utf-8"></script>
 <script src="lib/layui/layui.js" charset="utf-8"></script>
