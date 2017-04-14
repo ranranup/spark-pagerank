@@ -12,6 +12,7 @@
 #panel-detail {
     display: none;
     padding: 10px;
+    width: 600px;
 }
 .progress {
     margin-top: 20px;
